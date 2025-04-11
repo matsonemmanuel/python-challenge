@@ -1,28 +1,25 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: #f4f4f4;
+  background-color: #17b176;
   margin: 0;
   padding: 0;
 }
 
 h1 {
-  color: #333;
+  color: #2e10b5;
+  font-size: 36px;
+  text-align: center;
 }
 
-p {
+ul{
   font-size: 18px;
+  list-style-type: none;
 }
 
-button {
+li {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #007bff;
+  background-color: #fff;
   color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
 }

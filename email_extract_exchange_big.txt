@@ -1,0 +1,13 @@
+From: john.doe@example.com
+To: jane.smith@example.com
+Subject: Meeting request
+Date: Mon, 10 Apr 2025 14:30:00 +0000
+
+Hi Jane, let's meet at 3 PM tomorrow.
+
+From: alice.bob@example.com
+To: charlie.doe@example.com
+Subject: Status update
+Date: Tue, 11 Apr 2025 08:00:00 +0000
+
+Here’s the status update on the project.

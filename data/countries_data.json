@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Afghanistan",
+    "languages": ["Pashto", "Uzbek", "Turkmen"],
+    "population": 38928346
+  },
+  {
+    "name": "Belgium",
+    "languages": ["Dutch", "French", "German"],
+    "population": 11589623
+  },
+  {
+    "name": "Canada",
+    "languages": ["English", "French"],
+    "population": 38005238
+  },
+  {
+    "name": "Cameroon",
+    "languages": ["English", "French"],
+    "population": 22709892
+  },
+  {
+    "name": "India",
+    "languages": ["Hindi", "English"],
+    "population": 1393409038
+  },
+  {
+    "name": "Switzerland",
+    "languages": ["German", "French", "Italian", "Romansh"],
+    "population": 8725391
+  },
+  {
+    "name": "Nigeria",
+    "languages": ["English"],
+    "population": 211400708
+  },
+  {
+    "name": "Kenya",
+    "languages": ["English", "Swahili"],
+    "population": 53771296
+  },
+  {
+    "name": "South Africa",
+    "languages": ["Zulu", "Xhosa", "Afrikaans", "English", "Ndebele", "Sotho", "Swati", "Tsonga", "Tswana", "Venda"],
+    "population": 59308690
+  },
+  {
+    "name": "United States",
+    "languages": ["English"],
+    "population": 331002651
+  }
+]

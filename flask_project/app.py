@@ -1,35 +1,60 @@
-from flask import Flask, render_template, request
-from flask_pymongo import PyMongo
+from flask import Flask, request, jsonify, render_template
+from pymongo import MongoClient
+from myApp import api_app
 
 app = Flask(__name__)
 
-# MongoDB URI
-app.config["MONGO_URI"] = "mongodb://localhost:27017/myAppDB"  # Change 'your_database_name' to your DB name
+# MongoDB connection
+client = MongoClient("mongodb://localhost:27017/")
+db = client["myAppDB"]
+collection = db["users"]
 
-mongo = PyMongo(app)
+# Register the blueprint from myApp.py
+app.register_blueprint(api_app)  # This will include the `/items` route
 
+# Route to show homepage
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return "Flask is working and connected to MongoDB!"
 
+# Route to show HTML form
+@app.route('/form')
+def form():
+    return render_template('form.html')
+
+# Route to handle form submission
+@app.route('/submit', methods=['POST'])
+def submit():
+    name = request.form['name']
+    age = int(request.form['age'])
+    email = request.form['email']
+    location = request.form['location']
+
+    user_data = {
+        'name': name,
+        'age': age,
+        'email': request.form['email'],
+        'location': location
+    }
+
+    result = collection.insert_one(user_data)
+
+    return f"User {name} added successfully! ID: {str(result.inserted_id)}"
+
+# Optional: API route to submit JSON
+@app.route('/add', methods=['POST'])
+def add_user():
+    data = request.get_json()
+    if not data:
+        return jsonify({"error": "No data provided"}), 400
+
+    result = collection.insert_one(data)
+
+    return jsonify({
+        "message": "Data added successfully",
+        "inserted_id": str(result.inserted_id)
+    }), 201
+
+# Start the Flask app
 if __name__ == '__main__':
     app.run(debug=True)
-
-@app.route('/add_user', methods=['POST'])
-def add_user():
-    # Get data from form
-    name = request.form['name']
-    email = request.form['email']
-
-    # Insert data into MongoDB
-    users_collection = mongo.db.users  # Access the "users" collection
-    users_collection.insert_one({"name": name, "email": email})
-
-    return "User added successfully!"
-
-@app.route('/users')
-def show_users():
-    users_collection = mongo.db.users
-    users = users_collection.find()  # Retrieve all users
-
-    return render_template('users.html', users=users)
