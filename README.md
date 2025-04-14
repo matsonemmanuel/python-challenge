@@ -10,6 +10,36 @@ This challenge covers Python basics to intermediate concepts across 30 days. By 
 - Solve real-world problems using Python
 - Work confidently with functions, loops, conditionals, file handling, modules, and more
 
+## 🐍 Python Challenge Overview (Days 1–30)
+
+This challenge focuses on mastering Python fundamentals. Perfect for beginners and intermediate learners.
+
+| Day | Topic                         | Status |
+|-----|-------------------------------|--------|
+| 1   | Introduction, Syntax, Print   | ✅      |
+| 2   | Variables & Data Types        | ✅      |
+| 3   | Strings & String Methods      | ✅      |
+| 4   | Lists & List Methods          | ✅      |
+| 5   | Tuples, Sets, Dictionaries    | ✅      |
+| 6   | Conditionals (if/else)        | ✅      |
+| 7   | Loops (for, while)            | ✅      |
+| 8   | Functions                     | ✅      |
+| 9   | Lambda, Map, Filter           | ✅      |
+| 10  | Modules and Packages          | ✅      |
+| 11  | File Handling                 | ✅      |
+| 12  | Error Handling                | ✅      |
+| 13  | Object-Oriented Programming   | ✅      |
+| 14  | Recursion                     | ✅      |
+| 15  | Date and Time                 | ✅      |
+| 16  | JSON and APIs                 | ✅      |
+| 17  | Regular Expressions           | ✅      |
+| 18  | Web Scraping (with `requests`) | ✅      |
+| 19  | Working with CSV and Excel    | ✅      |
+| 20  | SQLite and Database Basics    | ✅      |
+| 21-29 | Mini Projects (CLI Tools, Games, etc.) | 🚧      |
+| 30  | Final Project 🎉             | 🚧      |
+
+
 ---
 
 ## 🚀 Getting Started
